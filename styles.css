@@ -1,0 +1,520 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'e-Ukraine';
+    src: url(/img/e-Ukraine-Regular.otf);
+}
+
+body {
+    font-family: 'e-Ukraine', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+:root {
+    --blockColor: #B1E1B4;
+    --backgroundColor: #F6F7FB;
+}
+
+main {
+    background-color: var(--backgroundColor);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 80px;
+}
+
+.logo img {
+    -webkit-user-drag: none;
+    user-select: none;
+    width: 80px;
+}
+
+.logo h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.logo h2 span {
+    color: #848484;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+
+.nav-list {
+    display: flex;
+    font-size: 15px;
+    gap: 30px;
+    margin-left: 30px;
+    font-weight: 300;
+    align-items: center;
+    list-style: none;
+    padding: 62px 0px;
+}
+
+.nav-list-item {
+    transition: .3s;
+}
+
+.nav-list-item:hover {
+    color: #5ac31a;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mspu-image {
+    width: 330px;
+    height: 101px;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.main-container {
+    padding: 60px 150px;
+}
+
+#rules-section {
+    padding: 25px;
+    border-radius: 50px;
+    background-color: var(--blockColor);
+}
+
+#rules-section h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+#rules-section p {
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.rules-section-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rules-section-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rules-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#girl-image {
+    position: absolute;
+    width: 110px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+#stripe-big {
+    width: 350px;
+}
+
+#alert-map-section {
+    margin-top: 100px;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f9fb;
+    transition: opacity 0.75s visibility 0.7s;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #7449f5;
+    border-radius: 50%;
+    animation: loading .75s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+#alert-map-section img {
+    width: 44px;
+}
+
+#alert-map-section h2 {
+    text-align: center;
+}
+
+#vin-region-shelters {
+    text-align: center;
+    width: 100%;
+    border-radius: 50px;
+}
+
+#vin-region-shelters h2 {
+    text-align: center;
+    padding: 150px;
+    font-size: 48px;
+}
+
+#h2-text {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#support-section {
+    margin: 50px auto;
+    max-width: 1000px;
+    border-radius: 50px;
+    background-color: var(--blockColor);
+    width: fit-content;
+}
+
+#support-section>* {
+    text-align: center;
+}
+
+#support-section h2 {
+    padding-top: 27px;
+    padding-left: 31px;
+    padding-right: 31px;
+    font-weight: 400;
+    font-size: 16.5px;
+}
+
+#support-section img {
+    width: 50px;
+}
+
+.service-number-btn {
+    color: #fff;
+    border-radius: 40px;
+    border: none;
+    padding: 7px;
+    width: 130px;
+    margin: 5px;
+    text-align: center;
+    font-family: 'e-Ukraine', sans-serif;
+}
+
+.service-number-btn:nth-child(1) {
+    background-color: #FE7A7A;
+}
+
+.service-number-btn:nth-child(3) {
+    background-color: #8DA6FF;
+}
+
+.service-number-btn:nth-child(5) {
+    background-color: #FFC363;
+}
+
+#support-section img {
+    width: 50px;
+    padding: 10px;
+}
+
+#get-help-text {
+    font-size: 24px;
+    text-align: center;
+}
+
+.get-help {
+    background-color: var(--blockColor);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 470px;
+}
+
+.get-help form {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.get-help form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.get-help form label {
+    font-size: 12px;
+    color: #666;
+}
+
+.get-help form input,
+.get-help form select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.get-help form input:focus,
+.get-help form select:focus {
+    border-color: #00a651;
+}
+
+.get-help form div div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.get-help form div div span {
+    background-color: #f0f0f0;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.get-help form div div input {
+    flex: 1;
+    border-radius: 0 5px 5px 0;
+    margin: 0;
+}
+
+.get-help form a {
+    font-size: 12px;
+    color: #00a651;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.get-help form a:hover {
+    text-decoration: underline;
+}
+
+.donate-container {
+    margin: 40px 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 50px;
+    padding: 20px;
+    background-color: var(--blockColor);
+}
+
+.column {
+    display: flex;
+    border-radius: 50px;
+    width: 100%;
+    max-width: 1000px;
+    gap: 20px;
+}
+
+/* Ліва колонка */
+.left-column {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Кнопки суми донату */
+.donate-btn {
+    background-color: #e6e6e6;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 5px 5px 15px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.donate-btn:hover {
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+}
+
+/* Заголовки */
+h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.gray-text {
+    font-size: 14px;
+    color: #848484;
+}
+
+/* Випадаючі списки */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Картинка користувача */
+.user-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Текст договору */
+.blue-text-dashed {
+    color: #007bff;
+    text-decoration: underline dashed;
+    cursor: pointer;
+}
+
+/* Чекбокс */
+input[type="checkbox"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Кнопки дії */
+#cancel-btn,
+#pay-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+#cancel-btn {
+    background-color: #ccc;
+}
+
+#pay-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Права колонка */
+.right-column {
+    background-image: url(img/donat-na-zsu.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 1;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+    .column {
+        flex-direction: column;
+    }
+}
+
+.user-img {
+    width: 25px;
+}
+
+#checkbox-input {
+    margin: 0px 6px;
+    transform: scale(2);
+}
+
+/* .right-column img {
+display: flex;
+    width: 390px;
+height: 503px;
+} */
+
+.footer {
+    background-color: #000000;
+    color: #fff;
+    font-size: 16.5px;
+    font-weight: 300;
+}
+
+.footer-links-container {
+    margin: 0px 300px;
+}
+
+.footer-links {
+    list-style-type: none;
+    display: flex;
+    gap: 65px;
+    padding-top: 50px;
+    justify-content: center;
+}
+
+.footer-links-item {
+transition: 0.5s ease;
+}
+
+.footer-links-item:hover {
+    text-decoration: underline;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.footer-icons img {
+    width: 50px;
+}
